@@ -49,12 +49,10 @@ for y0, y1 in zip(ys[:-1], ys[1:]):
 ex = [(0.7825, 0.15, f"Excluded (n = {flow['records_received'] - flow['unique_participants_with_abi']})\n"
                     f"•  ABI missing (n = {flow['excluded_no_abi']})\n•  Implausible ABI > 2.0 (n = {flow['excluded_implausible_abi']})\n"
                     f"•  Duplicate records (n = {flow['excluded_duplicate_records']})"),
-      (0.5275, 0.16, f"Excluded (n = {flow['excluded_incomplete_core_panel']})\nIncomplete core panel*:\nage, HbA1c, TG, LDL-C, ALT,\ncreatinine, MCR, SBP or DBP")]
+      (0.5275, 0.16, f"Excluded (n = {flow['excluded_incomplete_core_panel']})\nIncomplete core panel:\nage, HbA1c, TG, LDL-C, ALT,\ncreatinine, MCR, SBP or DBP")]
 for y, h, t in ex:
     box(ax, SX, y, SW, h, t, align="left", size=8)
     ax.plot([MX, SX - SW / 2 - 0.006], [y, y], color=LINE, lw=1.2)
-ax.text(0.01, 0.0, "*HbA1c > 20%% was treated as missing (n = %d).\nABI, ankle–brachial index; MCR, microalbumin-to-creatinine ratio."
-        % flow["hba1c_set_missing_gt20"], fontsize=7.5, color=MUTED, va="bottom")
 save(fig, "Figure1_flowchart")
 plt.close(fig)
 
