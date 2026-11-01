@@ -13,8 +13,8 @@ partial dependence, Friedman's H-statistic, and the regression tests of the MCR 
 
 The individual-level data come from the Taiwan MJ Cohort and were provided by the MJ Health Research Foundation
 (authorization MJHRF2025011A). They are **not included** here because their use is governed by a data use
-agreement. Researchers can apply for access to the Foundation. The code expects the full-precision extract
-`2022_abi_stat.xlsx` (687 records, with case numbers). Do not use rounded/de-identified exports of the same data
+agreement. De-identified data are available from the corresponding author upon reasonable request. The code expects the full-precision extract
+`2022_abi_stat.xlsx` (687 records, with case numbers). Do not use rounded exports of the same data
 (e.g., a 680-row file without case numbers in which creatinine is rounded to integers): duplicate records cannot be
 identified in such files and creatinine/eGFR-based analyses are not meaningful. The extract is expected with one row per record and the columns, in order:
 
